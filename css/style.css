@@ -1,0 +1,248 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css?family=Lato|Staatliches');
+
+/* root variables */
+:root {
+    --primary-color: #b83b5e;
+    --secondary-color: #ff9a00;
+    --primary-light-color: #eeeeee;
+    --secondary-light-color: white;
+    --primary-dark-color: #222831;
+    --secondary-dark-color: #393e46;
+    --sport-color: #00adb5;
+    --entertainment-color: #ff9a00;
+    --technology-color: #aa96da;
+    --max-width: 1100px;
+}
+
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* default styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    background-color: var(--primary-light-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Staatliches', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+#main-navbar .container {
+    display: flex;
+    align-items: stretch;
+}
+
+#main-navbar .logo-container {
+    flex: 3;
+}
+
+.logo {
+    width: 180px;
+}
+
+#main-navbar .links {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-navbar .social-container {
+    flex: 2;
+}
+
+#main-navbar .social-container ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-navbar .social-container ul li i {
+    color: var(--light-gray);
+}
+
+#main-navbar .menu-container {
+    flex: 2;
+}
+
+#main-navbar .menu-container ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main-navbar .menu-container ul li a:hover {
+    background-color: var(--secondary-light-color);
+    color: var(--primary-dark-color);
+}
+
+/* showcase */
+#showcase {
+    position: relative;
+}
+
+#showcase::before {
+    content: "";
+    background: url(/img/featured.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#showcase .showcase-content {
+    z-index: 1;
+}
+
+#news .news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+}
+
+#news .news-container .news-one {
+    grid-column: 1 / span 2;
+}
+
+#news .news-container .news-one .news-content {
+    display: flex;
+    align-items: center;
+}
+
+#news .news-container .news-one .news-content>div {
+    flex: 1;
+}
+
+#news .news-container .news-one .news-content .news-img img {
+    width: 100%;
+}
+
+#news .news-container .news-seven .news-content {
+    display: flex;
+    align-items: center;
+}
+
+#news .news-container .news-seven .news-content>div {
+    flex: 1;
+}
+
+#news .news-container .news-seven .news-content .news-img img {
+    width: 100%;
+}
+
+#news .news-container .news-three .news-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#news .news-container .news-four .news-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#news .news-container .news-five .news-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#news .news-container .news-three .news-content .news-img img {
+    width: 100%;
+}
+
+#news .news-container .news-four .news-content .news-img img {
+    width: 100%;
+}
+
+#news .news-container .news-five .news-content .news-img img {
+    width: 100%;
+}
+
+#news .news-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#news .news-container .news-seven {
+    grid-column: 2 / span 2;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+input {
+    width: 90%;
+}
+
+footer form button {
+    width: 90%;
+}
+
+.plain-container {
+    width: 95%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* about page */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+}
+
+.about-container article {
+    grid-row: 1 / span 3;
+}
+
+.about-container aside {
+    height: fit-content;
+}
+
+.about-container aside button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
